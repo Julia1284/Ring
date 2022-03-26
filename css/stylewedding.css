@@ -85,6 +85,17 @@
     justify-content: space-between;
 }
 
+.catalog_choosing-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog_choosing-price button {
+    border: none;
+    background-color: transparent;
+}
+
+
 .price_title,
 .jewel_title,
 .tags_title {

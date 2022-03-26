@@ -4,8 +4,29 @@ const getData = () => {
 
     const list = document.querySelector('.catalog_list'); //получаем список товаров
     const showItem = document.querySelector('.show_select'); // получаем select
-    let number = 3;
-    let shownumber = showItem.value;
+    const priceBtns = document.querySelectorAll('.btn_price'); // получаем кнопки  цены
+
+    //функция, которая добавляет класс к выбранному элементу и удаляет у всех остальных
+    const changeChoosedClass = (e) => {
+        //let price = e.target.textContent
+        for (let i = 0; i < priceBtns.length; i++) {
+            const item = priceBtns[i];
+            item.classList.remove('choosed');
+        }
+        e.target.classList.add('choosed');
+    }
+    priceBtns.forEach(item => {
+        item.addEventListener('click', changeChoosedClass)
+    })
+    // priceBtns.forEach(item => {
+    //     item.addEventListener('click', (event) => {
+    //         console.log(event.target.textContent);
+    //     })
+    // })
+
+
+
+
     //функция, которая отрисовывает данные в карточки
     const render = (data) => {
         list.innerHTML = '' //очищаем список
@@ -28,7 +49,7 @@ const getData = () => {
 
                 </div>
                 <div class="item_price">
-                    ${item.price}
+                    ${item.price} ₽
                 </div>
             </div>
         </div>
@@ -38,6 +59,35 @@ const getData = () => {
     // функция, которая обрезает массив данных с нулевого элемента до index
     const sliceArray = (data, index) => {
         return (data.slice(0, index));
+    }
+    const filterPrice = (data, price) => {
+        let array = [];
+        if (price === 'от 100000') {
+            for (i = 0; i < data.length; i++) {
+                if (data[i].price >= 100000) {
+                    array.push(data[i])
+                }
+            }
+            return array
+        } else if (price === '50-70000') {
+            for (i = 0; i < data.length; i++) {
+                if (data[i].price >= 50000 && data[i].price <= 70000) {
+                    array.push(data[i])
+                }
+            }
+            return array
+        }
+        else if (price === '70-100000') {
+            for (i = 0; i < data.length; i++) {
+                if (data[i].price >= 70000 && data[i].price <= 100000) {
+                    array.push(data[i])
+                }
+            }
+            return array
+        }
+        else {
+            return data
+        }
     }
 
     const getGoods = () => {
@@ -50,21 +100,42 @@ const getData = () => {
                 }
             })
             .then((data) => {
-                let shownumber = 3// по умолчанию shownumber  = 3
+
+                let shownumber = 3 // по умолчанию shownumber  = 3
+
                 const changeData = (data) => {
-                    render(sliceArray(data, shownumber))   
+                    render(sliceArray(data, shownumber))
                 }
-                changeData(data)// выполняем функцию при загрузке страницы
+
+
+                changeData(data) // выполняем функцию при загрузке страницы
                 showItem.addEventListener('change', () => {
                     shownumber = showItem.value;
                     changeData(data) // выполняем функцию  при определенном shownumber 
+
+                })
+
+                priceBtns.forEach(item => {
+                    item.addEventListener('click', (event) => {
+                        let price = event.target.textContent;
+                        render(filterPrice(data, price))
+                        shownumber = showItem.value;
+                        showItem.addEventListener('change', () => {
+                            shownumber = showItem.value;
+                            changeData(data) // выполняем функцию  при определенном shownumber 
+        
+                        })
+                        console.log (shownumber)
+
+
+
+                    })
                 })
 
             })
+
     }
-
-
     getGoods()
-
 }
+
 getData()
