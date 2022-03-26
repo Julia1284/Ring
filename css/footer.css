@@ -1,0 +1,81 @@
+.footer {
+    background: #F8F9FD;
+
+}
+
+.footer_wrapper {
+    width: 132.1rem;
+    margin: 20rem auto;
+}
+
+.footer_container {
+    padding-top: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 7rem;
+}
+
+.footer_container-info,
+.footer_container-buyer,
+.footer_container-assortment,
+.footer_container-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer_info-ref,
+.footer_buyer-ref,
+.footer_assortment-ref,
+.footer_contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.privacy_text,
+.footer_number {
+    font-family: 'Open Sans 400';
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.footer_number {
+    opacity: 20%;
+}
+
+.footer_title {
+    font-family: 'Open Sans 300';
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer_container a,
+.contacts_adress,
+.contacts_mail {
+    text-decoration: none;
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: black;
+    opacity: 50%;
+}
+
+.contacts_number {
+    font-family: 'Open Sans 400';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.footer_socials {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.6rem;
+    padding-bottom: 6.4rem;
+}
+
+.bottomsocials a {
+    text-decoration: none;
+}

@@ -1,0 +1,172 @@
+@font-face {
+    font-family: "Open Sans 300";
+    src: local('Open Sans 300'),
+        url('/font/opensans/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans 400";
+    src: local('Open Sans 400'),
+        url('/font/opensans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans 600";
+    src: local('Open Sans 600'),
+        url('/font/opensans/OpenSans-Semibold.ttf');
+}
+
+@font-face {
+    font-family: "Raleway Light";
+    src: local('Raleway Light'),
+        url('/font/Raleway/static/Raleway-Light.ttf');
+}
+
+
+html,
+body {
+    font-size: 62.5%;
+    margin: 0;
+}
+
+h1,
+h3,
+h5 {
+    margin: 0;
+}
+
+.header_container-contacts {
+    background: rgb(158, 175, 194, 0.2);
+    color: black;
+    height: 7rem;
+    padding-top: 1.3rem;
+}
+
+.header_contacts {
+    z-index: 1;
+    width: 132.1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+.topschedule {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topphone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topsocials_icons {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.header_container-nav {
+    height: 26.6rem;
+}
+
+.header_container-nav {
+    width: 132.1rem;
+    margin: 0 auto;
+}
+
+.header_navigation {
+    padding-top: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header_nav {
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: black;
+    opacity: 0.5;
+}
+
+.header_nav a:not(:last-child) {
+    margin-right: 4.4rem;
+}
+
+.header_search {
+    display: flex;
+}
+
+.search {
+    outline: none;
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-right: 3.2rem;
+    border: 0;
+    border-bottom: 1px solid #ECEFF3;
+
+}
+
+.search::placeholder {
+    color: #9EAFC2;
+    opacity: 50%;
+}
+
+.header_search {
+    color: rgba(158, 175, 194, 1);
+}
+
+.header_title {
+    text-align: center;
+    padding-top: 4.5rem;
+
+}
+
+.header_title h1 {
+    font-family: 'Raleway Light';
+    font-size: 5rem;
+    line-height: 5.8rem;
+}
+
+.header_title h5 {
+    font-family: 'Open Sans 400';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: black;
+    opacity: 50%;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6.4rem;
+}
+
+
+.header_menu-nav a {
+    font-family: 'Open Sans 400';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.header_menu-nav a:not(:last-child) {
+    margin-right: 7rem;
+}
+
+.header_basket a:not(:last-child) {
+    margin-right: 2.7rem;
+}

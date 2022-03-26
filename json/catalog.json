@@ -1,0 +1,64 @@
+[
+    {
+        "article": "Арт. 019",
+        "image": "img/Catalog/art019.png",
+        "price":"59600 ₽"
+    },
+    {
+        "article": "Арт. 020",
+        "image": "img/Catalog/art020.png",
+        "price":"60000 ₽"
+    },
+    {
+        "article": "Арт. 021",
+        "image": "img/Catalog/art21.png",
+        "price":"100000 ₽"
+    },
+    {
+        "article": "Арт. 022",
+        "image": "img/Catalog/art22.png",
+        "price":"150000 ₽"
+    },
+    {
+        "article": "Арт. 023",
+        "image": "img/Catalog/art23.png",
+        "price":"70000 ₽"
+    },
+    {
+        "article": "Арт. 024",
+        "image": "img/Catalog/art24.png",
+        "price":"50500 ₽"
+    },
+    {
+        "article": "Арт. 025",
+        "image": "img/Catalog/art25.png",
+        "price":"90000 ₽"
+    },
+    {
+        "article": "Арт. 026",
+        "image": "img/Catalog/art26.png",
+        "price":"75000 ₽"
+    },
+    {
+        "article": "Арт. 027",
+        "image": "img/Catalog/art27.png",
+        "price":"95000 ₽"
+    },
+    {
+        "article": "Арт. 028",
+        "image": "img/Catalog/art28.png",
+        "price":"80000₽"
+    },
+    {
+        "article": "Арт. 029",
+        "image": "img/Catalog/art29.png",
+        "price":"115000₽"
+    },
+    {
+        "article": "Арт. 030",
+        "image": "img/Catalog/art30.png",
+        "price":"130000₽"
+    }
+
+
+]

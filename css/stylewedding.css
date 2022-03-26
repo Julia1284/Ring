@@ -1,0 +1,233 @@
+.catalog {
+    width: 132.1rem;
+    margin: 0 auto;
+}
+
+.catalog_wrapper {
+    width: 132.1rem;
+    margin: 7rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalog_nav {
+    margin: 0 auto;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.catalog_nav a {
+    text-decoration: none;
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.catalog_info {
+    margin-top: 2.2rem;
+
+
+}
+
+.catalog_info-title {
+    font-family: 'Open Sans 600';
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+}
+
+.catalog_info-text {
+    font-family: 'Open Sans 300';
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    width: 87rem;
+
+}
+
+.catalog_filter {
+    margin-top: 6.8rem;
+    width: 87rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.slider_title {
+    margin-left: 2rem;
+    font-family: 'Open Sans 300';
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+.show_title,
+.rating_title {
+    font-family: 'Open Sans 300';
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+.show_select,
+.rating_select {
+    border: none;
+    font-family: 'Open Sans 600';
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+}
+
+.rating_select {
+    color: #020F59;
+}
+
+.catalog_choosing {
+    margin-top: 5.1rem;
+    width: 87rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_title,
+.jewel_title,
+.tags_title {
+    font-family: 'Open Sans 600';
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    padding-bottom: 2rem;
+}
+
+.price_low,
+.price_medium,
+.price_medium-high,
+.price_high,
+.with,
+.without,
+.catalog_tag,
+.catalog_tag-hidden {
+    font-family: 'Open Sans 400';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.choosed {
+    font-family: 'Open Sans 600';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.tags {
+    width: 36.1rem;
+    display: flex;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+}
+
+
+
+.tags_showall {
+    position: relative;
+    padding-left: 0rem;
+    padding-top: 2.2rem;
+    background-color: transparent;
+    border: white;
+    font-family: 'Open Sans 400';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.tags_showall:after {
+    content: '';
+    position: absolute;
+    left: 11rem;
+    bottom: 0.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 1px solid;
+    border-color: transparent #000 #000 transparent;
+    transform: rotate(45deg);
+    transition: border-color 0.4s ease-in-out, bottom 0.4s ease-in-out;
+}
+
+.tags_showall.active:after {
+    border-color: #000 transparent transparent #000;
+    bottom: 0.3rem;
+}
+
+.open {
+    display: none;
+}
+
+.catalog_list {
+    width: 132.1rem;
+    margin: 16.9rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16rem;
+}
+
+.items_art_rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.item_art {
+    font-family: 'Open Sans 400';
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.item_like_price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.item_price {
+    font-family: 'Open Sans 600';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.item_like {
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: rgb(197, 193, 193);
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.item_like::before,
+.item_like::after {
+    content: '';
+    /* обязательное свойство*/
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: rgb(197, 193, 193);
+    ;
+    border-radius: 50%;
+    /* закругление радиуса*/
+    position: absolute;
+}
+
+.item_like::before {
+    top: -1rem;
+    left: 0;
+}
+
+.item_like::after {
+    top: 0;
+    left: -1rem;
+}
+
+.catalog_text {
+    font-family: 'Open Sans 300';
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+.catalog_text span {
+    font-family: 'Open Sans 600';
+    color: #020F59;
+}
