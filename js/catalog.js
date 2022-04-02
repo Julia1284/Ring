@@ -5,6 +5,16 @@ const getData = () => {
     const list = document.querySelector('.catalog_list'); //получаем список товаров
     const showItem = document.querySelector('.show_select'); // получаем select
     const priceBtns = document.querySelectorAll('.btn_price'); // получаем кнопки  цены
+    const catalogList = document.querySelector('.catalog_list');
+    console.log (catalogList)
+    
+    catalogList.addEventListener('click', (event) => {
+        console.log (event.target)
+        if (event.target.classList.contains ('foto')){
+            document.location.href = './goodscart.html'
+        }
+    })
+    console.log(priceBtns)
 
     //функция, которая добавляет класс к выбранному элементу и удаляет у всех остальных
     const changeChoosedClass = (e) => {
@@ -18,15 +28,6 @@ const getData = () => {
     priceBtns.forEach(item => {
         item.addEventListener('click', changeChoosedClass)
     })
-    // priceBtns.forEach(item => {
-    //     item.addEventListener('click', (event) => {
-    //         console.log(event.target.textContent);
-    //     })
-    // })
-
-
-
-
     //функция, которая отрисовывает данные в карточки
     const render = (data) => {
         list.innerHTML = '' //очищаем список
@@ -42,7 +43,7 @@ const getData = () => {
                 </div>
             </div>
             <div class="item_foto">
-                <img src="./${item.image}" alt="art019">
+                <img class = "foto" src="./${item.image}" alt="art019">
             </div>
             <div class="item_like_price">
                 <div class="item_like">
@@ -60,8 +61,9 @@ const getData = () => {
     const sliceArray = (data, index) => {
         return (data.slice(0, index));
     }
+    let array = [];
     const filterPrice = (data, price) => {
-        let array = [];
+        array = []; //очищаем массив
         if (price === 'от 100000') {
             for (i = 0; i < data.length; i++) {
                 if (data[i].price >= 100000) {
@@ -76,17 +78,21 @@ const getData = () => {
                 }
             }
             return array
-        }
-        else if (price === '70-100000') {
+        } else if (price === '70-100000') {
             for (i = 0; i < data.length; i++) {
                 if (data[i].price >= 70000 && data[i].price <= 100000) {
                     array.push(data[i])
                 }
             }
+            console.log(array)
             return array
-        }
-        else {
-            return data
+        } else  if (price === 'от 50000') {
+            for (i = 0; i < data.length; i++) {
+                if (data[i].price >= 50000 ) {
+                    array.push(data[i])
+                }
+            }
+            return array
         }
     }
 
@@ -102,33 +108,30 @@ const getData = () => {
             .then((data) => {
 
                 let shownumber = 3 // по умолчанию shownumber  = 3
-
+                let price = 50000 // по умолчанию  price = 50000
                 const changeData = (data) => {
                     render(sliceArray(data, shownumber))
                 }
-
-
                 changeData(data) // выполняем функцию при загрузке страницы
                 showItem.addEventListener('change', () => {
                     shownumber = showItem.value;
-                    changeData(data) // выполняем функцию  при определенном shownumber 
-
+                    //let price = '';
+                    priceBtns.forEach(item => {
+                        if (item.classList[2]) {
+                            price = item.innerHTML
+                        }
+                    })
+                    filterPrice(data, price)
+                    console.log(price)
+                    changeData(array) // выполняем функцию  при определенном shownumber 
                 })
 
                 priceBtns.forEach(item => {
                     item.addEventListener('click', (event) => {
-                        let price = event.target.textContent;
-                        render(filterPrice(data, price))
+                        price = event.target.textContent;
+                        filterPrice(data, price) //фильтруем по цене
                         shownumber = showItem.value;
-                        showItem.addEventListener('change', () => {
-                            shownumber = showItem.value;
-                            changeData(data) // выполняем функцию  при определенном shownumber 
-        
-                        })
-                        console.log (shownumber)
-
-
-
+                        changeData(array) // то, что получилось, отрисовываем в соответствии с количеством
                     })
                 })
 

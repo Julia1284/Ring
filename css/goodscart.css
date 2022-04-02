@@ -1,0 +1,110 @@
+.cart_container {
+    width: 132.1rem;
+    margin: 7rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.cart_art {
+    display: flex;
+    margin-top: 2.2rem;
+    align-items: baseline;
+}
+
+.cart_articul {
+    margin-right: 3.4rem;
+    font-family: 'Open Sans 600';
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+}
+
+.number_rating,
+.cart_like {
+    margin-left: 1rem;
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.cart_rating {
+    display: flex;
+
+}
+
+.cart_like_heart {
+    display: flex;
+    margin-left: 3.5rem;
+}
+
+.cart_main {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_round {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_arrow {
+    border: none;
+    background-color: inherit;
+}
+
+.cart_mainfoto {
+    width: 69rem;
+    height: 69rem;
+}
+
+.cart_basket {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_basket-price {
+    font-family: 'Open Sans 600';
+    font-size: 4rem;
+    line-height: 5.5rem;
+    padding-bottom: 5rem;
+}
+
+.cart_btn {
+    width: 41rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+    background-color: #020F59;
+    color: white;
+    font-family: 'Open Sans 600';
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.whatsapp {
+    background-color: white;
+    color: black;
+}
+
+.cart_whatsapp-btn {
+    padding-bottom: 3rem;
+}
+
+.cart_description,
+.cart_order {
+    font-family: 'Open Sans 300';
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    padding-bottom: 4.9rem;
+}
+
+.cart_order-title {
+    font-family: 'Open Sans 400';
+}
